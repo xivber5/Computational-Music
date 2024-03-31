@@ -1,0 +1,76 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    source_code: "https://github.com/xivber5/Computational-Music/"
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(spotifyr)
+library(grid)
+library(gtable)
+library(ggrepel)
+```
+# Introduction
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+queens_tears <- get_playlist_audio_features("", "2KG4ZPNd045dzwHGWZQq2X")
+y <- select(queens_tears, valence, tempo, energy)
+#ggplot(y, aes(x=valence, y=tempo)) + geom_point()
+
+#options(repr.plot.width = 1, repr.plot.height =1) 
+
+ggplot(y, aes(x= valence, y=tempo)) +
+  geom_point() +
+  geom_text_repel(aes(label = queens_tears$track.name)) 
+  #theme(text = element_text(size = 9),element_line(size =1)
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+queens_tears <- get_playlist_audio_features("", "2KG4ZPNd045dzwHGWZQq2X")
+y <- select(queens_tears, valence, tempo, energy)
+#ggplot(y, aes(x=valence, y=tempo)) + geom_point()
+
+#options(repr.plot.width = 1, repr.plot.height =1) 
+
+ggplot(y, aes(x= valence, y=tempo)) +
+  geom_point() +
+  geom_text_repel(aes(label = queens_tears$track.name)) 
+  #theme(text = element_text(size = 9),element_line(size =1)
+
+```
+
+### Chart C
+
+```{r}
+queens_tears <- get_playlist_audio_features("", "2KG4ZPNd045dzwHGWZQq2X")
+y <- select(queens_tears, valence, tempo, energy)
+#ggplot(y, aes(x=valence, y=tempo)) + geom_point()
+
+#options(repr.plot.width = 1, repr.plot.height =1) 
+
+ggplot(y, aes(x= valence, y=tempo)) +
+  geom_point() +
+  geom_text_repel(aes(label = queens_tears$track.name)) 
+  #theme(text = element_text(size = 9),element_line(size =1)
+
+```
+
+# Visualisation
+
+
+# Conclusion 
