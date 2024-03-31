@@ -3,7 +3,7 @@ title: "Untitled"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
-    source_code: "https://github.com/xivber5/Computational-Music/"
+    source_code: "https://github.com/xivber5/Computational-Music"
     vertical_layout: fill
 ---
 
