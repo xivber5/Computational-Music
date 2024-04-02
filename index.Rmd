@@ -526,7 +526,9 @@ cm_chroma |>
 ```
 
 #### Chromo analysis
-The parts are divided by the green vertical lines. The red line represents the average time of the "Tell me it's not a dream" being played in the drama. In general the track is being played from the intro to the average time. In contrast to "My reason of my smiles" is this track's intro not mention worthy. It has no significant use, than setting up the track. The centre of attention is steered into the chorus and verses. 
+The parts are divided by the green vertical lines. The red line represents the average time of the "Tell me it's not a dream" being played in the drama. In general the track is being played from the intro to the average time.
+
+In contrast to "My reason of my smiles" is this track's intro not mention worthy. It has no significant use, than setting up the track. The centre of attention is steered into the chorus and verses. 
 
 ##### Verse 1
 Verse 1 is played with a guitar bass. The bass pattern is apparent in the D/C# pitches through the magnitude blocks. Showing the skeleton of the track. The guitar bass accompanied with singing are the highlights of the verse. There is no clear indication of multiple vocals. It seems that the singing of 10CM is relatively the same over the whole track, resulting in a homogeneous spread of intensities. 
@@ -581,12 +583,14 @@ heize_chroma |>
 ```
 
 #### Chromo analysis
-It's observable that the scale used is C,B,A,B,F,D# and D, because the pitch magnitudes are concentrated on horizontal axis. The spacing in the pitches is very similar to the piano part in "Tell me it's not a dream" and in fact the track is mainly accompanied by the piano. This track's chromagram has no o    bvious patterns, the magnitudes are all over the place. Hinting towards a high tempo track. 
+The parts are divided by the green vertical lines. The red line represents the average time of the "Hold me back" being played in the drama. In general the track is being played from the intro to the average time.
+
+It's observable that the scale used is C, B, A, A#, F,D# and D, because the pitch magnitudes are concentrated on horizontal axis. The spacing in the pitches is very similar to the piano part in "Tell me it's not a dream" and in fact the track is mainly accompanied by the piano. This track's chromagram has no obvious patterns, the magnitudes are all over the place. Hinting towards a high tempo track. 
 
 #### Usages 
 Verse 1 + chorus 1 are largely used for sad and conflicting scenes. In half of cases is the verse 2 added to prolong the heartbreaking moments. "Hold me back" has one of the longest average time. This supports the idea that sad moments are longer than the happy counter parts. Since the viewer wants to feel more happy than sad, the drama slows down the track's tempo on these scenes. While in the sad parts, the drama increases the tempo to make it feel shorter than actual is. The sad scenes need to be longer to evoke the maximum amount of tension.
 
-### Crush
+### Love you with all my heart
 
 #### Chromogram
 
@@ -633,11 +637,21 @@ crush_chroma |>
 ```
 
 #### Chromo analysis
+The parts are divided by the green vertical lines. The red line represents the average time of the "Love you with all my heart" being played in the drama. In general the track is being played from the intro to the average time.
+
+It's observable that the scale used is B, A, G#, F#, E, D# and C#, because the pitch magnitudes are concentrated on horizontal axis.
+
+This track's chromagram also has no obvious patterns, the magnitude and use of the pitches does not emit any logical story.
+
+#### Usages
+Verse 1 is used in all occurrences and the first snippet of chorus 1 is added. The addition of the chorus is for fitting the scene's duration.
+
+
 
 
 #### Usages
 
-### Isaac
+### Fallin'
 
 #### Chromogram
 
@@ -681,6 +695,32 @@ isaac_chroma |>
 ```
 
 #### Chromo analysis
+The parts are divided by the green vertical lines. The red line represents the average time of the "Fallin'" being played in the drama. In general the track is being played from the intro to the average time.
+
+
+##### Scale
+It's observable that the scale used is C, A#, G#, F#, F, D# and C#, because the pitch magnitudes are concentrated on horizontal axis.
+
+
+##### Low magnitude areas
+The track has the most low magnitude areas. The tracks audio can be considered having the sharpest timbre. Containing fewer undertones and using instruments with a clear sound, such as the piano. 
+
+
+##### Blocks
+The singer can be heard to hold a high pitch for a longer time. The blocks can be interpreted as holding the pitch.
+
+#### Lowest energy score
+Judging by the magnitudes the track. The track doesn't strike as having the lowest energy score from Spotify. Maybe the amount of dark areas are what makes Spotify rank a track with a lower energy score. This also explains why "Tell me it's note a dream" has a low energy score, since it has the second most dark areas. Followed by "Love you with all my heart as third.
+
+#### Usages
+In 1 instance has the full track been used. Despite being used fully, doesn't imply anything structurally. The reason for the long use : The wife found out about the divorcement papers, while the couple were happily in Germany mending their love once more. The scene was meant to showcase the severity of breaking their trust.
+
+Also the longer average time is largely effected by the full use instance. The average time without the full use is 70 seconds. This concludes that verse 1 and chorus 1 are mainly used.
+
+
+
+
+
 
 
 
