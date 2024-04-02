@@ -866,18 +866,20 @@ compmus_long_distance(
 
 # Conclusion
 
+## Row
+
 By comparing the valence of the track's employment in the drama and the Spotify features on the tracks, is it possible to find correlations between the concepts. 
 
-## "The reason of my smiles" 
+### The reason of my smiles"
 The perceived usage of "The reason of my smiles" has a positive correlation with the Spotify features. This correlation is supported by high valence score given by Spotify and largely use in happy scenes. 
 
-## "Tell me it's not a dream"
+### Tell me it's not a dream
 The perceived usage of "Tell me it's not a dream" has a negative correlation with the Spotify features. Spotify sees the track as unhappiest track. While the track is clearly used for joyful moments. 
 
-## "Hold me back"
+### Hold me back
 The perceived usage of"Hold me back" has a positive correlation with the Spotify features. Spotify sees the track as sad track, which is exact usage of the track in the drama.
 
-## "Love you with all my heart" & "Fallin'"
+### Love you with all my heart" & "Fallin'
 "Love you with all my heart" and "Fallin'" are used for the same goal and the 2 tracks are also similar in the Spotify features by the similarity in timbre. Both tracks are perceived as negative in the drama. This negative energy is also obsververd by the Spotifty. Resulting positive correlation.
 
 
