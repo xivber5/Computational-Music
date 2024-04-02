@@ -51,8 +51,8 @@ url_5 <- "https://www.youtube.com/watch?v=jbjZ9kcmvD0"
 ```{r}
 # My own data-frame of OST in episodes
 episode <- c(1,1,1,1,1,2,2,3,3,3,3,3,4,4,5,5,5,6,6,6,6,6,7,7,8,8)
-start <- c(74, 480, 580, 1880, 4446, 4058, 5127, 337, 1607, 1975, 2535, 4130, 182, 5018, 130, 2235, 4531, 355, 1555, 3065, 4539, 4779, 263, 4655, 297, 5090)
-end <- c(139, 546, 661, 1960, 4520, 4128, 5250, 338, 1680, 2010, 2600, 4840, 236, 5142, 195, 2300, 4674, 440, 1641, 3128, 4600, 4877, 500, 4763, 388, 5122)
+start <- c(74, 480, 580, 1880, 4446, 4058, 5127, 337, 1607, 1975, 2535, 4730, 182, 5018, 130, 2235, 4531, 355, 1555, 3065, 4539, 4779, 263, 4655, 297, 5090)
+end <- c(139, 546, 661, 1960, 4520, 4128, 5250, 398, 1680, 2010, 2600, 4840, 236, 5142, 195, 2300, 4674, 440, 1641, 3128, 4600, 4877, 500, 4763, 388, 5122)
 
 OST <- c("The reason of my smiles", "Tell me it's not a dream", "The reason of my smiles", "Hold me back", "The reason of my smiles", "The reason of my smiles", "The reason of my smiles" ,  "Love you with all my heart", "The reason of my smiles", "Tell me it's not a dream", "Tell me it's not a dream", "Tell me it's not a dream", "Tell me it's not a dream", "Hold me back", "Love you with all my heart", "Hold me back", "Hold me back", "Love you with all my heart", "Love you with all my heart", "Tell me it's not a dream", "Fallin'", "Hold me back", "Fallin'", "Fallin'", "The reason of my smiles", "Fallin'")
 
@@ -209,7 +209,7 @@ ggplot(cm_epi, aes(x=episode, fill=Valence)) +
 
 The track is generally very positive. There is also no evidence in a structural dependency of the usage of the track and the valence. Just as with the track "The reason of my smiles", is the happy ranking suddenly changing in the later episodes. The remarkable thing here is that the ranking is not sad, but conflicted, which can mean that the song itself is perceived more optimistically. 
 
-Furthermore, the track is largely used in the 3e episode. Since this episode belongs to phase 1, meaning mostly positive scenes and with the obtained knowledge from the previous track "The reason of my smiles" distribution. A conclusion can be made that this track is used for transitioning the previous lovely emotions to another one, that feels new and surprising. In my opinion, this track sounds more sad than the previous track. This may be well a sign of a descending progression for the protagonists. 
+Furthermore, the track is largely used in the 3e episode. Since this episode belongs to phase 1, meaning mostly positive scenes and with the obtained knowledge from the previous track "The reason of my smiles" distribution. A conclusion can be made that this track is used for transitioning the previous lovely emotions to another one, that feels new and surprising. In my opinion, this track sounds more sad than the previous track. This may be a sign of a descending progression for the protagonists. 
 
 #### No correlation between segment and valence
 
@@ -409,7 +409,7 @@ The barplot above correlates very well with the track's individual analysis. "Th
 
 "Tell me it's not a dream" has surprisingly the lowest valence score even though the track is largely used for positive interactions. The cause for this particular score can be due to the chord progressions and timbre. 10CM's voice do give off melancholic timbre. In this case, the Spotify valence is missing contextual data of the drama, which misclassifies the valence score.
 
-"Hold me back" is mainly used for saddest parts. It is remarkable that the track is the second highest in valence. In comparison to the others tracks, Hold me back's lyrics are entirely Korean. I think Spotify has no translation algoritm to find out the lyrics valence. Also the BPM of Hold me back is the highest, meaning the activity of the track is relatively high. This could mean that the valence score is boosted by the energy, tempo and loudness scores.
+"Hold me back" is mainly used for the saddest parts. It is remarkable that the track is the second highest in valence. In comparison to the others tracks, Hold me back's lyrics are entirely Korean. I think Spotify has no translation algorithm to find out the lyrics valence. Also the BPM of Hold me back is the highest, meaning the activity of the track is relatively high. This could mean that the valence score is boosted by the energy, tempo and loudness scores.
 
 
 
@@ -464,22 +464,22 @@ bss_chroma |>
 ```
 
 #### Chromo analysis
-Judging by the differences in the segments, the track can be divided into an intro, verse, pre-chorus, chorus and ending. The parts are divided by the green vertical lines. The red line represents the average time of the "The reason of my smiles" being played in the drama. The second part of the track is not frequently used, because the emotional scenes don't last long. The heart throbbing effect loses its meaning when scenes are too long.
+Judging by the differences in the segments, the track can be divided into an intro, verse, pre-chorus, chorus and ending. The parts are divided by the green vertical lines. The red line represents the average time of the "The reason of my smiles" being played in the drama. In general the track is being played from the intro to the average time. The second part of the track is not frequently used, because the emotional scenes don't last long. The heart throbbing effect loses its meaning when scenes are too long.
 
 ##### intro
 The intro is longer than usual. Making the track's intro very distinct when played in the drama. The piano chords are clearly the focus in the intro. This intention is found in the chroma, where the magnitude is solely in the pitches F,G,A,C. This focus on the piano chords has another effect of presenting the signature melody, which are repeated in the following verse.
 
 ##### verse
-It is slightly visible in the verse that it is sung, because of the overtones in the singing. The overtones created a higher magnitude in the pitches, resulting in less dark blotches. The melody and rythm of the verse stays the same as the intro. The only addition is a singing voice. 
+It is slightly visible in the verse that it is sung, because of the overtones in the singing. The overtones creates a higher magnitude in the pitches, resulting in dark blue blotches decreasing in size. The melody and rythm of the verse stays the same as the intro. The only addition is a singing voice. 
 
 ##### pre-chorus
 The pre-chorus is used to form a bridge to the chorus. In the chorus feels a bit faster, due to the sudden addition of low frequency beats. In order to transition from a slow paced verse to a faster paced chorus, the writer added a pre-chorus. The same pitches are being played, but faster. Just right before the chorus segment the pre-chorus pitches vanishes. This drop can be seen in the B-G region, the main pitches for the melody, where the magnitude is very dark.  
 
 ##### chorus
-The chorus has an overall higher magnitude, resulting in a a greener segment. This magnitude is caused by louder singing, section sung in falsetto and higher pitches and the faster paced rythm. The main melody is still visible in the chorus. 
+The chorus has an overall higher magnitude, resulting in a a greener segment. This magnitude is caused by louder singing, section sung in falsetto and higher pitches and the faster paced rythm. The main melody is still visible in the chorus. The reason for the chorus 2 to be larger is because half of the chorus is the post-chorus. This post-chorus is included in the sheet music, but discerning the post-chorus in the chroma proved to be difficult. Also the post-chorus is not used in the drama, which makes it irrelevant.
 
 #### Usages
-Only the intro, verse 1 and pre-chorus are used for the background music. It is likely that the chorus is too noisy for heartwarming scenes. The chorus has a higher tempo, which is undesirable when the drama wants to zoom into the facial expressions of the protagonist.
+Only the intro, verse 1 and pre-chorus are used for the background music. It is likely that the chorus is too noisy for heartwarming scenes. The chorus feels as having a higher tempo, which is undesirable when the drama wants to zoom into the facial expressions of the protagonist.
 
 ### Tell me it's not a dream
 
@@ -487,15 +487,15 @@ Only the intro, verse 1 and pre-chorus are used for the background music. It is 
 
 ```{r, echo=FALSE, fig.width=15, fig.height=4}
 
-avg_cm <- cm_epi %>% mutate(avg_len=end - start) %>% summarize(avg_duration=sum(avg_len)/7)
+avg_cm <- cm_epi %>% mutate(avg_len=end - start) %>% summarize(avg_duration=sum(avg_len)/6)
 
-heize_chroma <-
+cm_chroma <-
   get_tidy_audio_analysis(s_2) |>
   select(segments) |>
   unnest(segments) |>
   select(start, duration, pitches)
 
-heize_chroma |>
+cm_chroma |>
   mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
   compmus_gather_chroma() |> 
   ggplot(
@@ -510,7 +510,7 @@ heize_chroma |>
   labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
   theme_minimal() +
   scale_fill_viridis_c() +
-   geom_vline(xintercept = 10, color = "green", size = 2) +
+  geom_vline(xintercept = 10, color = "green", size = 2) +
   geom_vline(xintercept = 60, color = "green", size = 2) +
   geom_vline(xintercept = 150, color = "green", size = 2) +
   geom_vline(xintercept = 100, color = "green", size = 2) + 
@@ -526,11 +526,19 @@ heize_chroma |>
 ```
 
 #### Chromo analysis
+The parts are divided by the green vertical lines. The red line represents the average time of the "Tell me it's not a dream" being played in the drama. In general the track is being played from the intro to the average time. In contrast to "My reason of my smiles" is this track's intro not mention worthy. It has no significant use, than setting up the track. The centre of attention is steered into the chorus and verses. 
 
-##### Verse
+##### Verse 1
+Verse 1 is played with a guitar bass. The bass pattern is apparent in the D/C# pitches through the magnitude blocks. Showing the skeleton of the track. The guitar bass accompanied with singing are the highlights of the verse. There is no clear indication of multiple vocals. It seems that the singing of 10CM is relatively the same over the whole track, resulting in a homogeneous spread of intensities. 
 
-#### Chorus
+##### Chorus 1
+The drums are added in chorus 1. This addition increases the Inharmonicity, which in turn slightly increases the segment's magnitudes. The melodic bass pattern is also apparent in the chorus, continuing to improve the feeling of familiarity.
 
+##### Verse 2 
+In verse 2 the guitar bass disappears and is replaced with a piano playing the same pitches. The block pattern is still visible with some imagination. The magnitudes are constantly changing. This may be due to the ADSR of the piano, which has a fast release phase. Creating more nuances in the pitch magnitudes. The change in timbre is evident even though the chromagram is oriented around structural analysis.
+
+#### Usages
+Only verse 1 and a single use of the chorus has been observed in the drama to convey positive emotions. There is no clear structural reason for the usage. 
 
 ### Hold me back
 
@@ -538,10 +546,10 @@ heize_chroma |>
 
 ```{r, echo=FALSE, fig.width=15, fig.height=4}
 
-avg_heize <- heize_epi %>% mutate(avg_len=end - start) %>% summarize(avg_duration=sum(avg_len)/7)
+avg_heize <- heize_epi %>% mutate(avg_len=end - start) %>% summarize(avg_duration=sum(avg_len)/5)
 
 heize_chroma <-
-  get_tidy_audio_analysis(s_2) |>
+  get_tidy_audio_analysis(s_3) |>
   select(segments) |>
   unnest(segments) |>
   select(start, duration, pitches)
@@ -561,23 +569,22 @@ heize_chroma |>
   labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
   theme_minimal() +
   scale_fill_viridis_c() +
-   geom_vline(xintercept = 10, color = "green", size = 2) +
+  geom_vline(xintercept = avg_heize$avg_duration , color = "red", size = 2) +
   geom_vline(xintercept = 60, color = "green", size = 2) +
-  geom_vline(xintercept = 150, color = "green", size = 2) +
-  geom_vline(xintercept = 100, color = "green", size = 2) + 
-  geom_vline(xintercept = 225, color = "green", size = 2) + 
-
+  geom_vline(xintercept = 98, color = "green", size = 2) +
+  geom_vline(xintercept = 135, color = "green", size = 2) +
+  
   annotate('text', x = 35, y = 6.5, label = '(Verse 1)', size=7, fontface="bold", color="orange", alpha=0.5) +
   annotate('text', x = 80, y = 6.5, label = '(Chorus 1)', size=7, fontface="bold", color="orange", alpha=0.5) +
-  annotate('text', x = 125, y = 6.5, label = '(Verse 2)', size=7, fontface="bold", color="orange", alpha=0.5) +
-  annotate('text', x = 190, y = 6.5, label = '(Chorus 2)', size=7, fontface="bold", color="orange", alpha=0.5) +
-  
-  geom_vline(xintercept = avg_heize$avg_duration , color = "red", size = 2) 
-
+  annotate('text', x = 120, y = 6.5, label = '(Verse 2)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 180, y = 6.5, label = '(Chorus 2)', size=7, fontface="bold", color="orange", alpha=0.5)
 ```
 
 #### Chromo analysis
+It's observable that the scale used is C,B,A,B,F,D# and D, because the pitch magnitudes are concentrated on horizontal axis. The spacing in the pitches is very similar to the piano part in "Tell me it's not a dream" and in fact the track is mainly played with piano. This track's chromagram has no obvious patterns, the magnitudes are all over the place. Hinting towards a high tempo track. 
 
+#### Usages 
+Verse 1 + chorus 1 are largely used for sad and conflicting scenes. In half of cases is the verse 2 added to prolong the heartbreaking moments. "Hold me back" has one of the longest average time. This supports the idea that sad moments are longer than the happy counter parts. Since the viewer wants to feel more happy than sad, the drama slows down the track's tempo on these scenes. While in the sad parts, the drama increases the tempo to make it feel shorter than actual is. The sad scenes need to be longer to evoke the maximum amount of tension.
 
 ### Crush
 
@@ -586,13 +593,16 @@ heize_chroma |>
 
 ```{r, echo=FALSE, fig.width=15, fig.height=4}
 
-wood <-
+avg_crush <- crush_epi %>% mutate(avg_len=end - start) %>% summarize(avg_duration=sum(avg_len)/4)
+
+
+crush_chroma <-
   get_tidy_audio_analysis(s_4) |>
   select(segments) |>
   unnest(segments) |>
   select(start, duration, pitches)
 
-wood |>
+crush_chroma |>
   mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
   compmus_gather_chroma() |> 
   ggplot(
@@ -606,11 +616,26 @@ wood |>
   geom_tile() +
   labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
   theme_minimal() +
-  scale_fill_viridis_c()
+  scale_fill_viridis_c() +
+  geom_vline(xintercept = avg_crush$avg_duration , color = "red", size = 2) +
+  geom_vline(xintercept = 10, color = "green", size = 2) +
+  geom_vline(xintercept = 60, color = "green", size = 2) +
+  geom_vline(xintercept = 160, color = "green", size = 2) +
+  geom_vline(xintercept = 220, color = "green", size = 2) +
+  geom_vline(xintercept = 120, color = "green", size = 2) +
+  
+  annotate('text', x = 35, y = 6.5, label = '(Verse 1)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 90, y = 6.5, label = '(Chorus 1)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 140, y = 6.5, label = '(Verse 2)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 190, y = 6.5, label = '(Chorus 2)', size=7, fontface="bold", color="orange", alpha=0.5)
+  
 
 ```
 
 #### Chromo analysis
+
+
+#### Usages
 
 ### Isaac
 
@@ -618,13 +643,15 @@ wood |>
 
 ```{r, echo=FALSE, fig.width=15, fig.height=4}
 
-wood <-
+avg_isaac <- isaac_epi %>% mutate(avg_len=end - start) %>% summarize(avg_duration=sum(avg_len)/4)
+
+isaac_chroma <-
   get_tidy_audio_analysis(s_5) |>
   select(segments) |>
   unnest(segments) |>
   select(start, duration, pitches)
 
-wood |>
+isaac_chroma |>
   mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
   compmus_gather_chroma() |> 
   ggplot(
@@ -638,7 +665,8 @@ wood |>
   geom_tile() +
   labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
   theme_minimal() +
-  scale_fill_viridis_c()
+  scale_fill_viridis_c() +
+  geom_vline(xintercept = avg_isaac$avg_duration , color = "red", size = 2) 
 
 ```
 
