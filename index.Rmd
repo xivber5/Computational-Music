@@ -581,7 +581,7 @@ heize_chroma |>
 ```
 
 #### Chromo analysis
-It's observable that the scale used is C,B,A,B,F,D# and D, because the pitch magnitudes are concentrated on horizontal axis. The spacing in the pitches is very similar to the piano part in "Tell me it's not a dream" and in fact the track is mainly played with piano. This track's chromagram has no obvious patterns, the magnitudes are all over the place. Hinting towards a high tempo track. 
+It's observable that the scale used is C,B,A,B,F,D# and D, because the pitch magnitudes are concentrated on horizontal axis. The spacing in the pitches is very similar to the piano part in "Tell me it's not a dream" and in fact the track is mainly accompanied by the piano. This track's chromagram has no o    bvious patterns, the magnitudes are all over the place. Hinting towards a high tempo track. 
 
 #### Usages 
 Verse 1 + chorus 1 are largely used for sad and conflicting scenes. In half of cases is the verse 2 added to prolong the heartbreaking moments. "Hold me back" has one of the longest average time. This supports the idea that sad moments are longer than the happy counter parts. Since the viewer wants to feel more happy than sad, the drama slows down the track's tempo on these scenes. While in the sad parts, the drama increases the tempo to make it feel shorter than actual is. The sad scenes need to be longer to evoke the maximum amount of tension.
@@ -666,7 +666,17 @@ isaac_chroma |>
   labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
   theme_minimal() +
   scale_fill_viridis_c() +
-  geom_vline(xintercept = avg_isaac$avg_duration , color = "red", size = 2) 
+  geom_vline(xintercept = avg_isaac$avg_duration , color = "red", size = 2) +
+  geom_vline(xintercept = 8, color = "green", size = 2) +
+  geom_vline(xintercept = 60, color = "green", size = 2) +
+  geom_vline(xintercept = 112, color = "green", size = 2) +
+  geom_vline(xintercept = 160, color = "green", size = 2) +
+  geom_vline(xintercept = 240, color = "green", size = 2) +
+  
+  annotate('text', x = 35, y = 6.5, label = '(Verse 1)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 85, y = 6.5, label = '(Chorus 1)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 140, y = 6.5, label = '(Verse 2)', size=7, fontface="bold", color="orange", alpha=0.5) +
+  annotate('text', x = 200, y = 6.5, label = '(Chorus 2)', size=7, fontface="bold", color="orange", alpha=0.5)
 
 ```
 
