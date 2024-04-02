@@ -90,7 +90,7 @@ The K-drama is about a married couple, that lost all love for each other. The mi
 
 ### Structural significance
 
-In total there are 26 instances of the use of released OSTs. There are recurring patterns in the distribution, when looking at the sequential usage. As you can see in the histogram below, the track "The reason of my smiles" is concentrated in the first 3 episodes, marking the first phase of the drama. "Hold me back" is concentrated in the 4-6, marking the second phase and "Fallin'" 6-8 the third phase. The OSTs do actually play a significant role in the structure of the drama. 
+In total there are 26 instances of the use of released OSTs. There are recurring patterns in the distribution, when looking at the sequential usage. As you can see in the histogram below, the track "The reason of my smiles" is concentrated in the first 3 episodes, marking the first phase of the drama. "Hold me back" is concentrated in the 4-6, marking the second phase and "Fallin'" 6-8 the third phase. The OSTs do actually play a significant role in the structure of the drama.
 
 - phase 1 : The change of heart
 - phase 2 : The truth of divorcement resurfaces
@@ -111,7 +111,7 @@ ggplot(my_df, aes(x=episode, fill=OST)) +
 
 In the histogram below, you can see that the phases are also apparent when observing the conveyed emotions for each episode. The emotional connotations and the phases are highly correlated. In a way, the tracks are used for the emotional transition through phases. This transition is not only structural, but also semantic. A track accumulates more and more contextual meaning with each consecutive use. Not only consolidating the structure, but also integrate meaningful aspects into a track. 
 
-The valence of "Conflicted" means uncertain whether the use is happy or sad.
+The valence of "Conflicted" means uncertain whether the use is happy or sad. The valence in the data set is chosen based on my personal perception. In other words, the data is very biased. 
 
 
 
@@ -374,7 +374,7 @@ The use of the track is determined by the ending track of the previous episode. 
 ## Column {style="min-width:600px"}
 
 ### Handcrafted data
-I manually ran through all the episodes to create a data frame. This was necessary for linking the musical analysis with the drama.
+I manually ran through all the episodes to create a data frame. This was necessary for contrasting the Spotify features with the drama's feel. The data contains mostly facts with one exception : valence. This valence is based on my own judgement of the scenes. This may vary from person to person. The perceived valence from the scenes is an essential metric for finding correlations between employment of tracks and the emotional perception.
 
 - start = begin of the track in seconds
 - end = end of the fragment in seconds
@@ -403,7 +403,7 @@ ggplot(sort, aes(x=fct_inorder(track.name), y=valence, fill=energy)) +
 ### Compare Spotify valence score
 
 
-The energy score in Spotify signifies the perceptual measure of intensity and activity of a track. The energy feature suites really well with the prior analysis. The perception of the tracks in the drama.
+The energy score in Spotify signifies the perceptual measure of intensity and activity of a track. The energy feature suites really well with my own valence feature. This valence is the perception of the track in the drama.
 
 The barplot above correlates very well with the track's individual analysis. "The reasons of my smiles" is frequently used for the most positive scenes and can be seen with the highest valence score. However the score seems rather low. This may be the result of the fairly neutral lyrics and low tempo of the track. On the contrary the energy score fits perfectly on the perceived experience of the track in the drama. The track is not too eventful and noisy. 
 
@@ -414,6 +414,12 @@ The barplot above correlates very well with the track's individual analysis. "Th
 
 
 # Chroma's {data-navmenu=Analysis data-orientation=rows}
+
+## Row {style="min-height:200px"}
+
+### Take a peek in the chroma
+
+Let's first take a look at how the tracks are structured and which section of the track is frequently used in the drama. This is done by using a chromagram, which is great way to visualize the track's pitches and find differences in sections. 
 
 ## Row {style="min-height:1000px" .tabset .tabset-fade}
 
@@ -647,10 +653,6 @@ This track's chromagram also has no obvious patterns, the magnitude and use of t
 Verse 1 is used in all occurrences and the first snippet of chorus 1 is added. The addition of the chorus is for fitting the scene's duration.
 
 
-
-
-#### Usages
-
 ### Fallin'
 
 #### Chromogram
@@ -717,11 +719,190 @@ In 1 instance has the full track been used. Despite being used fully, doesn't im
 
 Also the longer average time is largely effected by the full use instance. The average time without the full use is 70 seconds. This concludes that verse 1 and chorus 1 are mainly used.
 
+## Row {style="min-height:200px"}
+
+### Summarisation of the Chroma's
+
+- The general structure of the tracks is I,V,C,V,C,O.
+- The darker areas with low magnitude are highly correlated with the Spotify's a lower energy score
+- The difference in timbre is visible in the chroma's. Hinting that timbre has an effect on valence en energy.
+- Marked the segments which are used in the scenes. Advantaguous for filtering unneeded segments.
+- Able to discern the scales used. Despite not very informative now.
 
 
 
 
+```{r, echo=FALSE, fig.width=5, fig.height=4}
+
+short_bss <-
+  get_tidy_audio_analysis(s_1) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches) |>
+  filter(start < 82)
+
+short_cm <-
+  get_tidy_audio_analysis(s_2) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches) |>
+  filter(start < 65)
+
+short_heize <-
+  get_tidy_audio_analysis(s_3) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches) |>
+  filter(start < 102)
+
+short_crush <-
+  get_tidy_audio_analysis(s_5) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches) |>
+  filter(start < 74)
+
+short_isaac <-
+  get_tidy_audio_analysis(s_5) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, pitches) |>
+  filter(start < 120)
+```
+
+```{r}
+
+short_bss <-
+  get_tidy_audio_analysis(s_1) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, timbre) |>
+  filter(start < 82)
+
+short_cm <-
+  get_tidy_audio_analysis(s_2) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, timbre) |>
+  filter(start < 65)
+
+short_heize <-
+  get_tidy_audio_analysis(s_3) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, timbre) |>
+  filter(start < 102)
+
+short_crush <-
+  get_tidy_audio_analysis(s_5) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, timbre) |>
+  filter(start < 74)
+
+short_isaac <-
+  get_tidy_audio_analysis(s_5) |>
+  select(segments) |>
+  unnest(segments) |>
+  select(start, duration, timbre) |>
+  filter(start < 120)
+```
+
+# Timbre {data-navmenu=Analysis data-orientation=rows}
+
+## Row {style="min-height:200px"} 
+
+### Understand the timbre in tracks
+Since we know which segments are primarily used in the drama, we can now look at timbre features in these segments. To find emerging relationship between the timbre in the tracks and the emotional scenes.
 
 
+## Row {style="min-height:500px"} 
+
+### Dynamic Time Warping
+
+#### DTW insights
+The deployment of DTW is to find similarities in segments. There are 2 possible scenario's : 
+
+ - If these similarities occur in tracks used for the same purpose, then the timbre may be the causal factor.
+ - When the tracks have no similarities, then the timbre of a track is unique. 
+ 
+To my surprise there actually exist a similarity between 2 tracks : "Fallin'" and  "Love you with all my heart". In the DTW plot on the right can a continuous diagonal line been seen. This diagonal line represents the exact similarity of timbre features in that area. This similarity explains the similar employment of the tracks in the drama. Conveying a complex mixture of happiness and sadness. 
+
+#### New categorisation 
+The tracks are both used for all categories of valence and can be considered all-round. With this new insight the tracks can be categorized:
+
+- Happy : "The reason of my smiles" and "Tell me it's a dream".
+- Conflicted : "Fallin'" and  "Love you with all my heart".
+- Sad : "Hold me back"
+
+
+### DTW of "Fallin'" &  "Love you with all my heart"
+
+```{r, echo=FALSE, fig.width=5, fig.height=4}
+compmus_long_distance(
+  short_isaac |> mutate(timbre = map(timbre, compmus_normalise, "chebyshev")),
+  short_crush |> mutate(timbre = map(timbre, compmus_normalise, "chebyshev")),
+  feature = timbre,
+  method = "euclidean"
+) |>
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  coord_equal() +
+  labs(x = "Fallin'", y = "Love you with all my heart") +
+  theme_minimal() +
+  scale_fill_viridis_c(guide = NULL)
+```
+
+## Row {style="min-height:500px"} 
+
+
+```{r}
+bss_ssm <-
+  get_tidy_audio_analysis(s_1) |> # Change URI.
+  compmus_align(bars, segments) |>                     # Change `bars`
+  select(bars) |>                                      #   in all three
+  unnest(bars) |>                                      #   of these lines.
+  filter(start < 82) |>
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"              # Change summary & norm.
+      )
+  )
+
+bss_ssm |>
+  compmus_self_similarity(timbre, "angular") |> 
+  ggplot(
+    aes(
+      x = xstart + xduration ,
+      width = xduration,
+      y = ystart + yduration,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  coord_fixed() +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
+
+```
 
 # Conclusion
