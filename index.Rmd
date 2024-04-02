@@ -80,7 +80,7 @@ title_5 <- "Fallin'"
 
 My corpus consist of the Orginal Sound Tracks(OSTs) of a Korean-drama : Queen of tears. The K-drama was just released in February and has me hooked! I've been continuously listening to the OSTs ever since the first episode.
 
-The OSTs are specifically chosen and made to match the melodramatic experience of this particular K-drama. That's the reason why the OSTs play an essential role in conveying the emotions to the viewer. It builds a form of familiarity to anticipate certain developments throughout the story. This effect of music on the viewer piqued my interest in using MIR to find correlations between the application of the tracks and the sensitive scenes in the drama.
+The OSTs are specifically chosen and made to match the melodramatic experience of this particular K-drama. That's the reason why the OSTs play an essential role in conveying the emotions to the viewer. It builds a form of familiarity to anticipate certain developments throughout the story. This effect of music on the viewer piqued my interest in using MIR to find correlations between the application of the tracks and the sensitive scenes in the drama. This can be done by comparing Spotify track analysis and the track usages.
 
 The corpus consist only of 5 track. This is because the drama hasn't ended yet, so the focus is on the 8 released episodes. 
 
@@ -826,7 +826,7 @@ The deployment of DTW is to find similarities in segments. There are 2 possible 
  - If these similarities occur in tracks used for the same purpose, then the timbre may be the causal factor.
  - When the tracks have no similarities, then the timbre of a track is unique. 
  
-To my surprise there actually exist a similarity between 2 tracks : "Fallin'" and  "Love you with all my heart". In the DTW plot on the right can a continuous diagonal line been seen. This diagonal line represents the exact similarity of timbre features in that area. This similarity explains the similar employment of the tracks in the drama. Conveying a complex mixture of happiness and sadness. 
+To my surprise there actually exist a similarity between 2 tracks : "Fallin'" and  "Love you with all my heart". In the DTW plot on the right can a continuous diagonal line been seen. This diagonal line represents the exact similarity of timbre features in that area. This similarity explains the similar employment of the tracks in the drama. Conveying a complex mixture of happiness and sadness.
 
 #### New categorisation 
 The tracks are both used for all categories of valence and can be considered all-round. With this new insight the tracks can be categorized:
@@ -864,45 +864,22 @@ compmus_long_distance(
 ## Row {style="min-height:500px"} 
 
 
-```{r}
-bss_ssm <-
-  get_tidy_audio_analysis(s_1) |> # Change URI.
-  compmus_align(bars, segments) |>                     # Change `bars`
-  select(bars) |>                                      #   in all three
-  unnest(bars) |>                                      #   of these lines.
-  filter(start < 82) |>
-  mutate(
-    pitches =
-      map(segments,
-        compmus_summarise, pitches,
-        method = "rms", norm = "euclidean"              # Change summary & norm.
-      )
-  ) |>
-  mutate(
-    timbre =
-      map(segments,
-        compmus_summarise, timbre,
-        method = "rms", norm = "euclidean"              # Change summary & norm.
-      )
-  )
-
-bss_ssm |>
-  compmus_self_similarity(timbre, "angular") |> 
-  ggplot(
-    aes(
-      x = xstart + xduration ,
-      width = xduration,
-      y = ystart + yduration,
-      height = yduration,
-      fill = d
-    )
-  ) +
-  geom_tile() +
-  coord_fixed() +
-  scale_fill_viridis_c(guide = "none") +
-  theme_classic() +
-  labs(x = "", y = "")
-
-```
-
 # Conclusion
+
+By comparing the valence of the track's employment in the drama and the Spotify features on the tracks, is it possible to find correlations between the concepts. 
+
+## "The reason of my smiles" 
+The perceived usage of "The reason of my smiles" has a positive correlation with the Spotify features. This correlation is supported by high valence score given by Spotify and largely use in happy scenes. 
+
+## "Tell me it's not a dream"
+The perceived usage of "Tell me it's not a dream" has a negative correlation with the Spotify features. Spotify sees the track as unhappiest track. While the track is clearly used for joyful moments. 
+
+## "Hold me back"
+The perceived usage of"Hold me back" has a positive correlation with the Spotify features. Spotify sees the track as sad track, which is exact usage of the track in the drama.
+
+## "Love you with all my heart" & "Fallin'"
+"Love you with all my heart" and "Fallin'" are used for the same goal and the 2 tracks are also similar in the Spotify features by the similarity in timbre. Both tracks are perceived as negative in the drama. This negative energy is also obsververd by the Spotifty. Resulting positive correlation.
+
+
+
+
